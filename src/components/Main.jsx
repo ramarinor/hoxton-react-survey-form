@@ -35,8 +35,8 @@ function Main() {
               email: e.target.email.value
             };
             updatedAnswersList.push(newAnswersList);
-            console.log(newAnswersList);
             setAnswersList(updatedAnswersList);
+            e.target.reset();
           }}
         >
           <h2>Tell us what you think about your rubber duck!</h2>
