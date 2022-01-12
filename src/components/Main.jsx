@@ -194,11 +194,11 @@ function Main() {
           </label>
           <label>
             Put your name here (if you feel like it):
-            <input type="text" name="username" value="" />
+            <input type="text" name="username" />
           </label>
           <label>
             Leave us your email pretty please??
-            <input type="email" name="email" value="" />
+            <input type="email" name="email" />
           </label>
           <input
             className="form__submit"
