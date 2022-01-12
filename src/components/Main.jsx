@@ -12,7 +12,33 @@ function Main() {
         <AnswersList answersList={answersList} />
       </section>
       <section className="main__form">
-        <form className="form">
+        <form
+          className="form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            const updatedAnswersList = JSON.parse(JSON.stringify(answersList));
+            const newAnswersList = {
+              bestFeatures: [...e.target.bestFeatures]
+                .filter((input) => input.checked)
+                .map((input) => input.value),
+              worstFeatures: [...e.target.worstFeatures]
+                .filter((input) => input.checked)
+                .map((input) => input.value),
+              consistency: e.target.consistency.value,
+              colour: e.target.colour.value,
+              logo: e.target.logo.value,
+              timeSpent: [...e.target.timeSpent]
+                .filter((input) => input.checked)
+                .map((input) => input.value),
+              review: e.target.review.value,
+              username: e.target.username.value,
+              email: e.target.email.value
+            };
+            updatedAnswersList.push(newAnswersList);
+            console.log(newAnswersList);
+            setAnswersList(updatedAnswersList);
+          }}
+        >
           <h2>Tell us what you think about your rubber duck!</h2>
           <div className="form__group">
             <h3>
@@ -164,26 +190,31 @@ function Main() {
             <ul>
               <li>
                 <label>
-                  <input name="spendTimeWith" type="checkbox" value="colour" />
+                  <input name="timeSpent" type="checkbox" value="Swimming" />
                   Swimming
                 </label>
               </li>
               <li>
                 <label>
-                  <input name="spendTimeWith" type="checkbox" value="sound" />
+                  <input name="timeSpent" type="checkbox" value="Bathing" />
                   Bathing
                 </label>
               </li>
               <li>
                 <label>
-                  <input name="spendTimeWith" type="checkbox" value="logo" />
+                  <input name="timeSpent" type="checkbox" value="Chatting" />
                   Chatting
                 </label>
               </li>
               <li>
                 <label>
-                  <input name="spendTimeWith" type="checkbox" value="size" />I
-                  don't like spending time with it
+                  <input
+                    name="timeSpent"
+                    type="checkbox"
+                    value="I don't
+                  like spending time with it"
+                  />
+                  I don't like spending time with it
                 </label>
               </li>
             </ul>

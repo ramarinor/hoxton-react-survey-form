@@ -3,8 +3,8 @@
 function ItemsList({ list }) {
   return (
     <ul>
-      {list.map((item) => (
-        <li>
+      {list.map((item, i) => (
+        <li key={i}>
           {Object.keys(answersSet).includes(item)
             ? answersSet[item]
             : answersSetTwo[item]}
