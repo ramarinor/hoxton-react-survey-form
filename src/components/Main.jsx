@@ -211,7 +211,7 @@ function Main() {
                   <input
                     name="timeSpent"
                     type="checkbox"
-                    value="I don't like to spend time with it"
+                    value="noTime"
                   />
                   I don't like to spend time with it
                 </label>
