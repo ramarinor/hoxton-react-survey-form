@@ -190,19 +190,19 @@ function Main() {
             <ul>
               <li>
                 <label>
-                  <input name="timeSpent" type="checkbox" value="Swimming" />
+                  <input name="timeSpent" type="checkbox" value="swimming" />
                   Swimming
                 </label>
               </li>
               <li>
                 <label>
-                  <input name="timeSpent" type="checkbox" value="Bathing" />
+                  <input name="timeSpent" type="checkbox" value="bathing" />
                   Bathing
                 </label>
               </li>
               <li>
                 <label>
-                  <input name="timeSpent" type="checkbox" value="Chatting" />
+                  <input name="timeSpent" type="checkbox" value="chatting" />
                   Chatting
                 </label>
               </li>
