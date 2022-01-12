@@ -211,10 +211,9 @@ function Main() {
                   <input
                     name="timeSpent"
                     type="checkbox"
-                    value="I don't
-                  like spending time with it"
+                    value="I don't like to spend time with it"
                   />
-                  I don't like spending time with it
+                  I don't like to spend time with it
                 </label>
               </li>
             </ul>
